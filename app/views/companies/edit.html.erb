@@ -1,0 +1,7 @@
+<%= form_tag company_path, :method => :put do %>
+	   name : <%=text_field_tag :name, @company[:name]%><br />
+	   cnpj :<%=text_field_tag :cnpj, @company[:cnpj]%><br />
+	   address :<%=text_field_tag :address, @company[:address]%><br/>
+       description :<%=text_field_tag :description, @company[:description]%><br/><br/>
+	   <%=submit_tag "update"%>
+<%end%>

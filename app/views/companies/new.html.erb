@@ -1,0 +1,7 @@
+<%= form_tag companies_path, :method => :post do %>
+	   name : <%=text_field_tag :name%><br />
+	   cnpj :<%=text_field_tag :cnpj%><br />
+	   address :<%=text_field_tag :address%><br/><br/>
+       description :<%=text_field_tag :description%><br/><br/>
+	   <%=submit_tag "save"%>
+<%end%>
