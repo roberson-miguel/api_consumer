@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Você precisará iniciar os aplicativos Trampos e api_consumer em sua máquina local ... 
 
-Things you may want to cover:
+Inicie o aplicativo Trampos em 3000 (a porta padrão). 
 
-* Ruby version
+$ cd to_api_provider_folder $ rails s # iniciará o serviço de provedor de API na porta 3000 NOTA: Para que o código do consumidor da API funcione, o aplicativo do Trampos deve estar em execução 
 
-* System dependencies
+Inicie o aplicativo api_consumer em outra porta, digamos 3030 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+$ cd api_consumer rails s -p 3030 Vá para a página do aplicativo: http: // localhost: 3030 / companies # isso mostrará todas companias com opções para edição | excluir e link para riar uma nova compania. 
 
 * ...
