@@ -23,12 +23,9 @@ describe 'Company Management' do
         
             get companies_path
             
-            json = JSON.parse(response.body, symbolize_names: true)
-               
-            expect(response).to have_http_status(:ok)
-            
-            expect(json[0][:id]).to eq(:id)
-            expect(json[0][:name]).to eq(:name)
+            json_response = JSON.parse(response.body)
+
+            expect(hash_body.keys).to match_array([:id, :name, :cnpj, :address, :description])
         end
     end
 end

@@ -10,16 +10,16 @@
           <td>description</td>
 	      <td>Action</td>
 	    </tr>
-	    <%@companies.each do |u|%>
+	    <%@companies.each do |companies|%>
 	    <tr>
-	      <td><%=u[:id]%></td>
-	      <td><%=u[:name]%></td>
-	      <td><%=u[:cnpj]%></td>
-	      <td><%=u[:address]%></td>
-          <td><%=u[:description]%></td>
+	      <td><%=companies[:id]%></td>
+	      <td><%=companies[:name]%></td>
+	      <td><%=companies[:cnpj]%></td>
+	      <td><%=companies[:address]%></td>
+          <td><%=companies[:description]%></td>
 	      <td>
-	        <%= link_to "Edit", edit_company_path(u[:id]) %> | 
-	        <%= link_to "Delete", company_path(u[:id]), :method => :delete %>
+	        <%= link_to "Edit", edit_company_path(companies[:id]) %> | 
+	        <%= link_to "Delete", company_path(companies[:id]), :method => :delete %>
 	      </td>
 	    </tr>
 	   <%end%>
