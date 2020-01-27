@@ -33,7 +33,7 @@ class CompaniesController < ApplicationController
 	      flash[:notice] = "Company Saved successfully"
 	      redirect_to companies_path # redirect back to index page, which now list the newly created company
 	    rescue Exception => e
-	     flash[:error] = "Company Failed to save"
+	     flash[:alert] = "Company Failed to save"
 	     render :new
 	    end
     end
@@ -54,7 +54,7 @@ class CompaniesController < ApplicationController
 	      rest_resource.put payload , :content_type => "application/json"
 	      flash[:notice] = "Company Updated successfully"
 	    rescue Exception => e
-	      flash[:error] = "Company Failed to Update"
+	      flash[:alert] = "Company Failed to Update"
 	    end
 	    redirect_to companies_path
     end
@@ -66,7 +66,7 @@ class CompaniesController < ApplicationController
 	     rest_resource.delete
 	     flash[:notice] = "Company Deleted successfully"
 	    rescue Exception => e
-	     flash[:error] = "Company Failed to Delete"
+	     flash[:alert] = "Company Failed to Delete"
 	    end
 	    redirect_to companies_path
 	   end
