@@ -1,13 +1,26 @@
-# README
+## Rental APi_Consumer
 
-Você precisará iniciar os aplicativos Trampos e api_consumer em sua máquina local ... 
+API Consumer é um projeto modelo de como uma app pode consumir uma API de outro app. O foco do sistema é para fins de aprendizado, onde um terceiro poderia gerenciar os registros de companias no sistema.
 
-Inicie o aplicativo Trampos em 3000 (a porta padrão). 
+
+## Como iniciar o projeto
+
+Para executar esse projeto você deve ter um computador, preferencialmente com
+Linux, com a linguagem de programação Ruby na versão 2.6.3
+
+Dentro do diretório do projeto, você deve instalar as dependências definidas no
+arquivo `Gemfile` com o comando `bundle install`.
+
+Você precisará iniciar os aplicativos Trampos e Api_consumer em sua máquina local ... 
+
+Saiba como instalar o Trampos aqui : https://github.com/roberson-miguel/trampos
 
 $ cd trampos 
 $ rails s  
 
-iniciará o serviço de provedor de API na porta 3000 NOTA: Para que o código do consumidor da API funcione, o aplicativo do Trampos deve estar em execução 
+iniciará o serviço de provedor de API na porta 3000 
+
+NOTA: Para que o código do api_consumer funcione, o aplicativo do Trampos deve estar em execução.
 
 * Inicie o aplicativo api_consumer em outra porta, digamos 3030 
 
@@ -18,4 +31,4 @@ $ rails s -p 3030
 
 * isso mostrará todas companias com opções para edição | excluir e link para riar uma nova compania. 
 
-* Em breve atualizo com os requerimentos necessários.
+
