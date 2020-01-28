@@ -24,7 +24,7 @@ describe 'Company Management' do
         
             get companies_path
          
-                   
+            expect(response.content_type).to eq("text/html")
             expect(response).to render_template(:index)
             expect(:name)
             expect(:cnpj)
