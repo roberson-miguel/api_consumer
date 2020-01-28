@@ -17,15 +17,19 @@ describe 'Company Management' do
 
         it "returns http success" do
             expect(response).to have_http_status(:success)
+            
         end
 
         it 'Render Companies of API Trampos correctly' do
         
             get companies_path
-            
-            json_response = JSON.parse(response.body)
-
-            expect(hash_body.keys).to match_array([:id, :name, :cnpj, :address, :description])
+         
+                   
+            expect(response).to render_template(:index)
+            expect(:name)
+            expect(:cnpj)
+            expect(:address)
+            expect(:description)
         end
     end
 end

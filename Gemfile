@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 gem 'rest-client'
 gem 'turbolinks'
+gem 'rails-controller-testing'
 
 gem 'active_storage_validations'
 gem 'bootstrap', '~> 4.3.1'
