@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+require 'rest_client'
+
 describe 'Company Management' do
     context 'Index' do
 
@@ -23,13 +25,9 @@ describe 'Company Management' do
         it 'Render Companies of API Trampos correctly' do
         
             get companies_path
-         
-            expect(response.content_type).to eq("text/html")
+     
             expect(response).to render_template(:index)
-            expect(:name)
-            expect(:cnpj)
-            expect(:address)
-            expect(:description)
+          
         end
     end
 end
