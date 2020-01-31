@@ -12,21 +12,12 @@ describe 'Company Management' do
             expect(response).to have_http_status(:ok)
         end
 
-        #Using before with get root
-        before do
-            get companies_path
-        end
-
-        it "returns http success" do
-            expect(response).to have_http_status(:success)
-            
-        end
-
         it 'Render Companies of API Trampos correctly' do
-        
+
             get companies_path
-     
-            expect(response).to render_template(:index)
+                                             
+            expect(response.body).to include("Campus Code")
+            expect(response.body).to include("Bios Bug")
           
         end
     end
